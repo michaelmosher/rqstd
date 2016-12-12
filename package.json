@@ -1,0 +1,19 @@
+{
+  "name": "rqstd",
+  "version": "1.0.0",
+  "description": "API to manage formal requests",
+  "main": "app/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelmosher/rqstd.git"
+  },
+  "author": "michael mosher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelmosher/rqstd/issues"
+  },
+  "homepage": "https://github.com/michaelmosher/rqstd#readme"
+}

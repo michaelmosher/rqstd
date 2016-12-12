@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/michaelmosher/rqstd/issues"
   },
-  "homepage": "https://github.com/michaelmosher/rqstd#readme"
+  "homepage": "https://github.com/michaelmosher/rqstd#readme",
+  "dependencies": {
+    "bookshelf": "^0.10.2",
+    "bunyan": "^1.8.5",
+    "express": "^4.14.0",
+    "knex": "^0.12.6",
+    "pg": "^6.1.1"
+  }
 }

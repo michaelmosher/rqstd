@@ -1,19 +1,15 @@
+// author: michael mosher
+// date: december 12, 2016
+'use strict'
 var express = require('express')
+const bodyParser = require('body-parser')
+
+var requestsRouter = require('./requests/router')
 
 var app = express()
-app.set('views', __dirname)
-// use whatever templating system(s) you like
-app.set('view engine', 'jade')
 
-// See the README about ordering of middleware
-// Load the routes ("controllers" -ish)
-app.use(require('app/site/router'))
-app.use('/api', require('app/customers/router'))
-app.use('/api', require('app/users/router'))
-// Repeat the above line for additional model areas ("deals", "vehicles", etc)
+app.use('/api', bodyParser.json())
+app.use('/api', bodyParser.urlencoded({extended: false}))
+app.use('/api', requestsRouter)
 
-// FINALLY, use any error handlers
-app.use(require('app/errors/not-found'))
-
-// Export the app instance for unit testing via supertest
 module.exports = app
